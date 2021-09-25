@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="scss/register.css">
+    <title>Signup</title>
+</head>
+<body>
+    <form action="" method="POST">
+        
+        <div class="intro">
+            <img src="images/account_circle_black_24dp.svg" alt="" srcset="">
+
+            <h3><%=message%></h3>
+        </div>
+
+        <p class="alt">
+            Already have an account? <a href="/login">Login</a>
+        </p>
+
+        <div class="main">
+            
+            <div class="input">
+                <label for="username">Username</label>
+
+                <input type="text" name="username" id="username">
+
+
+            </div>
+            <div class="input">
+                <label for="">Email</label>
+
+                <input type="email" name="email" id="email">
+
+
+            </div>
+            <div class="input">
+                <label for="password">Password</label>
+
+                <input type="password" name="password" id="password">
+
+
+            </div>
+            <div class="input">
+                <label for="confirmPassword">Confirm Password</label>
+
+                <input type="password" name="confirmPassword" id="confirm">
+
+            </div>
+        </div>
+
+        <button type="submit" class="specialLink">
+            Signup
+        </button>
+
+        <div class="socialLinks">
+            <p class="or">or</p>
+
+            <div class="links">
+               <a href="http://" class="socialLink">
+
+                <img src="images/icons8-google-48.png" alt="" srcset="">
+                <p>Signup with Google</p>
+            </a>
+               <a href="http://" class="socialLink">
+
+                <img src="images/icons8-facebook-logo-48.png" alt="" srcset="">
+                <p>Signup with Facebook</p>
+            </a>
+               <a href="http://" class="socialLink">
+
+                <img src="images/icons8-twitter-48.png" alt="" srcset="">
+                <p>Signup with Twitter</p>
+            </a>
+            </div>
+        </div>
+    </form>
+</body>
+</html>

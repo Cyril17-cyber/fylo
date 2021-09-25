@@ -1,0 +1,31 @@
+<%- include('partials/head') -%>
+
+<div class="dashboard">
+    <h1>Welcome <%=userId.username%></h1>
+
+    <div class="dashboard__details">
+        <div class="items">
+            <h4>Completed trade</h4>
+
+            <h2><%=userId.completed%></h2>
+        </div>
+        <div class="items">
+            <h4>Incomplete trade</h4>
+
+            <h2><%=userId.incomplete%></h2>
+        </div>
+        <div class="items">
+            <h4>Pending trade</h4>
+
+            <h2><%=userId.pending%></h2>
+        </div>
+        <div class="items">
+            <i class="fab fa-bitcoin"></i>
+            <h4>Amount in BTC</h4>
+
+            <h2>$<%=userId.balance%></h2>
+        </div>
+    </div>
+</div>
+
+<%- include('partials/footer') -%>
