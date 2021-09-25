@@ -25,7 +25,7 @@ app.use(express.static("app"));
 
 let userId;
 
-mongoose.connect(mongoUrl || mongoAlt,
+mongoose.connect(mongoAlt || mongoUrl,
     { useNewUrlParser: true, useUnifiedTopology: true }, err => {
         console.log('connected')
     });
@@ -44,7 +44,7 @@ const userSchema = new mongoose.Schema({
 
 const user = new mongoose.model('Profile', userSchema);
 
-app.get('/', (req, res)=>{
+app.get("/", (req, res)=>{
     userId = "";
     res.sendFile(__dirname + "/index.html")
 });
@@ -108,11 +108,11 @@ app.route("/login")
     });
 });
 
-app.get('/dashboard', (req, res)=> {
+app.get("/dashboard", (req, res)=> {
     if (userId.length === 0) {
         res.redirect('/login');
     } else {
-        res.render('dashboard', {userId: userId});
+        res.render("dashboard", {userId: userId});
     }
 });
 
