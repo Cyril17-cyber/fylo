@@ -10,6 +10,7 @@ const saltRounds = 10;
 const mongoUrl = process.env.MONGOURL;
 const mongoAlt = process.env.MONGOALT;
 
+const hostname = '0.0.0.0';
 let port = process.env.PORT || 3000;
 
 
@@ -118,8 +119,8 @@ app.get("/dashboard", (req, res)=> {
 
 
 
-app.listen(port, err => {
+app.listen(port, hostname, err => {
     if (err)
         throw err
-    console.log('Server listening on port ' + port)
+    console.log(`Server started at  http://${hostname}:${port}/`)
 });
